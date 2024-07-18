@@ -22,7 +22,11 @@ const Cart = () => {
 const SingleItem = () => {
 	const arrItem = items[0];
 	const [count, setCount] = useState(1);
+	const [remove, setRemove] = useState(true);
 
+	const deleteArr = () => {
+		setRemove(() => !remove);
+	};
 	const previousButton = () => {
 		if (count > 1) {
 			setCount(() => count - 1);
@@ -38,33 +42,35 @@ const SingleItem = () => {
 			<div className="cart-img">
 				<img src={arrItem.img} alt={arrItem.name} />
 			</div>
-			<div className="cart-details">
-				<div className="details-one">
-					<h5>{arrItem.name}</h5>
-					<p>Size {arrItem.size}</p>
-					<div>
-						<p>Colors </p>
-						<span
-							style={{ color: arrItem.color }}
-							className="color-shape"></span>
+			{remove && (
+				<div className="cart-details">
+					<div className="details-one">
+						<h5>{arrItem.name}</h5>
+						<p>Size {arrItem.size}</p>
+						<div>
+							<p>Colors </p>
+							<span
+								style={{ color: arrItem.color }}
+								className="color-shape"></span>
+						</div>
+						<h3>{`$ ${arrItem.price}`}</h3>
 					</div>
-					<h3>{`$ ${arrItem.price}`}</h3>
-				</div>
-				<div className="details-two">
-					<div>
-						<button onClick={previousButton} className="math">
-							-
-						</button>
-						<p>{count}</p>
-						<button onClick={nextButton} className="math">
-							+
+					<div className="details-two">
+						<div>
+							<button onClick={previousButton} className="math">
+								-
+							</button>
+							<p>{count}</p>
+							<button onClick={nextButton} className="math">
+								+
+							</button>
+						</div>
+						<button onClick={deleteArr} className="delete">
+							<FontAwesomeIcon icon={faTrash} />
 						</button>
 					</div>
-					<button className="delete">
-						<FontAwesomeIcon icon={faTrash} />
-					</button>
 				</div>
-			</div>
+			)}
 		</div>
 	);
 };

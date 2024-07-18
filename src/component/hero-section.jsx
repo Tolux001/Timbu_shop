@@ -5,7 +5,7 @@ import "../index.css";
 
 const HeroSection = () => {
 	return (
-		<header>
+		<>
 			<NavBar />
 			<div className="hero--section">
 				<div className="hero--container" style={{ padding: "12px 16px" }}>
@@ -19,7 +19,7 @@ const HeroSection = () => {
 					<Button content="ShopNow" hero="hero--btn" />
 				</div>
 			</div>
-		</header>
+		</>
 	);
 };
 

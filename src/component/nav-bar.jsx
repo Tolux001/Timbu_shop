@@ -8,31 +8,33 @@ import { Link } from "react-router-dom";
 
 const NavBar = () => {
 	return (
-		<nav className="nav">
-			<Brand />
-			<div className="nav--link">
-				<ul>
-					<li>
-						<Link to="/">Home</Link>
-					</li>
-					<li>
-						<Link to="/cart" style={{ color: "#ff6f61" }}>
-							Shop
-						</Link>
-					</li>
-					<li>
-						<Link href="">About</Link>
-					</li>
-					<li>
-						<Link href="">Contact</Link>
-					</li>
-				</ul>
-			</div>
-			<div className="nav--cart">
-				<img src="/log.png" alt="Prop-to-be-filled" />
-				<FontAwesomeIcon icon={faCartShopping} />
-			</div>
-		</nav>
+		<header>
+			<nav className="nav">
+				<Brand />
+				<div className="nav--link">
+					<ul>
+						<li>
+							<Link to="/">Home</Link>
+						</li>
+						<li>
+							<Link to="/cart" style={{ color: "#ff6f61" }}>
+								Shop
+							</Link>
+						</li>
+						<li>
+							<Link href="">About</Link>
+						</li>
+						<li>
+							<Link href="">Contact</Link>
+						</li>
+					</ul>
+				</div>
+				<div className="nav--cart">
+					<img src="/log.png" alt="Prop-to-be-filled" />
+					<FontAwesomeIcon icon={faCartShopping} />
+				</div>
+			</nav>
+		</header>
 	);
 };
 

@@ -1,6 +1,7 @@
 import React from "react";
 import Brand from "./brand";
 import Button from "./button";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
 	const dateYear = new Date().getFullYear();
@@ -15,8 +16,12 @@ const Footer = () => {
 					<div className="footer-right">
 						<Brand />
 						<ul>
-							<li style={{ color: "#ff6f61" }}>Home</li>
-							<li>Shop</li>
+							<li style={{ color: "#ff6f61" }}>
+								<Link to="/">Home</Link>
+							</li>
+							<li>
+								<Link to="/cart">Shop</Link>
+							</li>
 							<li>About</li>
 							<li>Contact</li>
 						</ul>

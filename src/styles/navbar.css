@@ -4,7 +4,7 @@ nav.nav {
 	justify-content: space-between;
 	align-items: center;
 	border-bottom: 1px solid rgba(132, 131, 131, 0.3);
-	background: var(--Background-Color);
+	background: #f8f8f8;
 }
 .nav--brand {
 	display: flex;
@@ -14,7 +14,7 @@ nav.nav {
 	gap: 8px;
 }
 .nav--brand h1 {
-	color: var(--Primary-Color);
+	color: #ff6f61;
 	font-family: "Poppins", sans-serif;
 	font-size: 32px;
 	font-weight: 700;
@@ -27,8 +27,8 @@ nav.nav {
 	align-items: center;
 	gap: 16px;
 }
-.nav--link ul li Link {
-	color: var(--Primary-text-color);
+.nav--link ul li > * {
+	color: #333;
 	font-family: "Poppins", sans-serif;
 	font-size: 18px;
 	font-weight: 500;
@@ -47,5 +47,5 @@ nav.nav {
 	height: 40px;
 	flex-shrink: 0;
 	border-radius: 500px;
-	border: 1px solid var(--Background-Color);
+	border: 1px solid #f8f8f8;
 }
