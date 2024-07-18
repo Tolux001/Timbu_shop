@@ -1,7 +1,7 @@
 import React from "react";
-import HeroSection from "./hero-section";
-import SortSection from "./sortSection";
-import Footer from "./footer";
+import HeroSection from "../component/hero-section";
+import SortSection from "../component/sortSection";
+import Footer from "../component/footer";
 import "../index.css";
 
 const App = () => {

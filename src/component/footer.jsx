@@ -16,7 +16,7 @@ const Footer = () => {
 						<Brand />
 						<ul>
 							<li style={{ color: "#ff6f61" }}>Home</li>
-							<li><a href="/blog">Shop</a></li>
+							<li>Shop</li>
 							<li>About</li>
 							<li>Contact</li>
 						</ul>
@@ -37,9 +37,7 @@ const Footer = () => {
 						</svg>
 						<p>{dateYear}</p>
 					</span>
-					<p style={{ color: "#848383" }}>
-						TimbuShop- All Right Reserved.
-					</p>
+					<p style={{ color: "#848383" }}>TimbuShop- All Right Reserved.</p>
 				</div>
 			</footer>
 		</>
