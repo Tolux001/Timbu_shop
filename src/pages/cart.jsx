@@ -6,16 +6,18 @@ import items from "../component/item";
 
 const Cart = () => {
 	return (
-		<main>
+		<>
 			<NavBar />
-			<section className="cart-section">
-				<FontAwesomeIcon icon={faArrowLeftLong} />
-				<div className="cart">
-					<h3>Cart Items</h3>
-					<SingleItem />
-				</div>
-			</section>
-		</main>
+			<main>
+				<section className="cart-section">
+					<FontAwesomeIcon icon={faArrowLeftLong} />
+					<div className="cart">
+						<h3>Cart Items</h3>
+						<SingleItem />
+					</div>
+				</section>
+			</main>
+		</>
 	);
 };
 

@@ -1,12 +1,10 @@
 import React from "react";
-import NavBar from "./nav-bar";
 import Button from "./button";
 import "../index.css";
 
 const HeroSection = () => {
 	return (
 		<>
-			<NavBar />
 			<div className="hero--section">
 				<div className="hero--container" style={{ padding: "12px 16px" }}>
 					<h1>

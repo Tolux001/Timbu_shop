@@ -30,8 +30,14 @@ const NavBar = () => {
 					</ul>
 				</div>
 				<div className="nav--cart">
-					<img src="/log.png" alt="Prop-to-be-filled" />
-					<FontAwesomeIcon icon={faCartShopping} />
+					<img
+						src="/log.png"
+						alt="Prop-to-be-filled"
+						title="Props to be filled"
+					/>
+					<Link to="/cart">
+						<FontAwesomeIcon icon={faCartShopping} />
+					</Link>
 				</div>
 			</nav>
 		</header>
