@@ -1,0 +1,328 @@
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+	/* dark shades of primary color*/
+	--clr-primary-1: hsl(205, 86%, 17%);
+	--clr-primary-2: hsl(205, 77%, 27%);
+	--clr-primary-3: hsl(205, 72%, 37%);
+	--clr-primary-4: hsl(205, 63%, 48%);
+	/* primary/main color */
+	--clr-primary-5: #49a6e9;
+	/* lighter shades of primary color */
+	--clr-primary-6: hsl(205, 89%, 70%);
+	--clr-primary-7: hsl(205, 90%, 76%);
+	--clr-primary-8: hsl(205, 86%, 81%);
+	--clr-primary-9: hsl(205, 90%, 88%);
+	--clr-primary-10: hsl(205, 100%, 96%);
+	/* darkest grey - used for headings */
+	--clr-grey-1: hsl(209, 61%, 16%);
+	--clr-grey-2: hsl(211, 39%, 23%);
+	--clr-grey-3: hsl(209, 34%, 30%);
+	--clr-grey-4: hsl(209, 28%, 39%);
+	/* grey used for paragraphs */
+	--clr-grey-5: hsl(210, 22%, 49%);
+	--clr-grey-6: hsl(209, 23%, 60%);
+	--clr-grey-7: hsl(211, 27%, 70%);
+	--clr-grey-8: hsl(210, 31%, 80%);
+	--clr-grey-9: hsl(212, 33%, 89%);
+	--clr-grey-10: hsl(210, 36%, 96%);
+	--clr-white: #fff;
+	--clr-red-dark: hsl(360, 67%, 44%);
+	--clr-red-light: hsl(360, 71%, 66%);
+	--clr-green-dark: hsl(125, 67%, 44%);
+	--clr-green-light: hsl(125, 71%, 66%);
+	--Background-Color: #f8f8f8;
+	--Primary-text-color: #333;
+	--Light-text-color: #848383;
+	--clr-gold: #c59d5f;
+	--clr-black: #222;
+	--Primary-Color: #ff6f61;
+	--transition: all 0.3s linear;
+	--spacing: 0.25rem;
+	--radius: 0.5rem;
+	--light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+	--dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+/*
+=============== 
+Global Styles
+===============
+*/
+
+*,
+::after,
+::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+a,
+li,
+button {
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+/* h1,
+h2,
+h3,
+h4 {
+	letter-spacing: var(--spacing);
+	text-transform: capitalize;
+	line-height: 1.25;
+	margin-bottom: 0.75rem;
+	font-family: var(--ff-primary);
+}
+h1 {
+	font-size: 3rem;
+}
+h2 {
+	font-size: 2rem;
+}
+h3 {
+	font-size: 1.25rem;
+}
+h4 {
+	font-size: 0.875rem;
+}
+p {
+	margin-bottom: 1.25rem;
+	color: var(--clr-grey-5);
+}
+@media screen and (min-width: 800px) {
+	h1 {
+		font-size: 4rem;
+	}
+	h2 {
+		font-size: 2.5rem;
+	}
+	h3 {
+		font-size: 1.75rem;
+	}
+	h4 {
+		font-size: 1rem;
+	}
+	h1,
+	h2,
+	h3,
+	h4 {
+		line-height: 1;
+	}
+} */
+/*  global classes */
+
+body {
+	/* max-width: 1280px; */
+	width: 100%;
+	font-family: "Poppins", sans-serif;
+	color: var(--Primary-text-color);
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 26px;
+}
+.hero--section {
+	background: linear-gradient(
+			0deg,
+			rgba(0, 0, 0, 0.2) 0%,
+			rgba(0, 0, 0, 0.2) 100%
+		),
+		url("/640e75226d22ad0783852834da9a0ca7.jfif") lightgray 50% / cover
+			no-repeat;
+			width: 100%;
+	display: inline-flex;
+	padding: 51px 681px 88px 83px;
+	align-items: center;
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+.hero--container h1 {
+	line-height: 120%;
+	align-self: stretch;
+	color: #fff;
+	font-family: "Poppins", sans-serif;
+	font-size: 48px;
+	margin-bottom: 8px;
+	font-weight: 700;
+}
+.hero--btn {
+	border-radius: 0.5em;
+	border: 1px solid transparent;
+	padding: 0.5em 1em;
+	color: #fff;
+	line-height: 24px;
+	margin-top: 20px;
+	font-size: 16px;
+	background: var(--Primary-Color);
+}
+.hero--btn:hover {
+	border-color: #e76a5f;
+}
+button:focus,
+button:focus-visible {
+	outline: 4px auto -webkit-focus-ring-color;
+}
+.sort-main,
+footer {
+	margin-inline: auto;
+	padding: 0px 80px;
+}
+.sorting--section {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+.list ul,
+.filter ul,
+.sort ul {
+	display: flex;
+	padding: 12px;
+	gap: 12px;
+}
+.list ul {
+	justify-content: center;
+}
+.list ul li {
+	color: var(--Primary-text-color);
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+}
+.list ul li.active {
+	font-size: 20px;
+	letter-spacing: 0.1px;
+	border: none;
+	border-bottom: 2px solid var(--Primary-Color);
+}
+.mobile {
+	display: none;
+}
+.card-shopping {
+	margin-top: 40px;
+}
+.card-shopping h1 {
+	margin-bottom: 20px;
+	text-transform: capitalize;
+	font-size: 32px;
+	font-weight: 700;
+	line-height: 40px;
+}
+.card-shopping ul {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	gap: 2em 1em;
+	/* align-content: center; */
+	place-items: center;
+}
+.grid-card li {
+	display: flex;
+	padding: 8px 4px;
+	width: 100%;
+	flex-direction: column;
+	justify-content: center;
+	border-radius: 12px;
+	border: 1px solid rgba(132, 131, 131, 0.4);
+	box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.2);
+}
+.grid-card li img {
+	display: flex;
+	width: 350px;
+	height: 330px;
+	padding: 0.25em 0;
+	align-items: center;
+	gap: 2px;
+	border-radius: 12px 12px 0px 0px;
+	background: linear-gradient(
+			0deg,
+			rgb(242, 242, 242) 0%,
+			rgb(242, 242, 242) 100%
+		),
+		rgb(242, 242, 242) 50% / cover no-repeat;
+}
+.grid-card-container {
+	position: relative;
+	top: -0.8em;
+	background-color: rgba(250, 250, 250, 0.6);
+	border-radius: var(--radius);
+	margin: 0 0.4em;
+	padding: 0.01em 0.4em;
+}
+.card-btn {
+	padding: 12px 8px;
+	display: flex;
+	width: 147px;
+	height: 48px;
+	justify-content: center;
+	align-items: center;
+	border-radius: 8px;
+}
+.btn-view {
+	background-color: var(--Primary-Color);
+	border: none;
+	color: var(--Background-Color);
+}
+.btn-cart {
+	border: 1px solid var(--Primary-Color);
+	color: var(--Primary-Color);
+}
+.card-section-btn {
+	display: flex;
+	justify-content: space-between;
+}
+.number-sort-section > div {
+	display: flex;
+	padding: 12px;
+	justify-content: space-between;
+	align-items: center;
+}
+.caret-number ul {
+	display: flex;
+	padding: 8px 12px;
+	align-items: center;
+	gap: 16px;
+}
+.caret-number li {
+	font-size: 24px;
+	color: var(--Light-text-color);
+	text-align: center;
+	font-weight: 700;
+	line-height: 32px;
+}
+.caret-number li.active-caret-number {
+	color: var(--Primary-Color);
+}
+.footer-left h1 {
+	font-size: 96px;
+	line-height: 150px;
+	text-transform: uppercase;
+}
+.footer {
+	display: flex;
+	justify-content: space-between;
+	gap: 10rem;
+	margin-bottom: 2rem;
+}
+.footer-right ul {
+	margin-top: 1em;
+	display: flex;
+	padding: 8px;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 16px;
+}
+.dateTime span {
+	display: inline-flex;
+	align-items: center;
+	gap: 12px;
+	margin-bottom: 12px;
+	color: #848383;
+}
