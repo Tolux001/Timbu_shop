@@ -1,12 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import Brand from "./brand";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
-import Brand from "./brand";
 import "../styles/navbar.css";
 import "../index.css";
-import { Link } from "react-router-dom";
 
 const NavBar = () => {
+	const [cart, setCart] = useState(0);
+	const activeState = cart > 0 ? "active-cart" : "";
+	const increaseBtn = () => {
+		setCart((cart) => cart + 1);
+	};
+
 	return (
 		<header>
 			<nav className="nav">
@@ -27,6 +33,7 @@ const NavBar = () => {
 						<li>
 							<Link href="">Contact</Link>
 						</li>
+						{/* <button onClick={increaseBtn}>Test</button> */}
 					</ul>
 				</div>
 				<div className="nav--cart">
@@ -35,9 +42,12 @@ const NavBar = () => {
 						alt="Prop-to-be-filled"
 						title="Props to be filled"
 					/>
-					<Link to="/cart">
-						<FontAwesomeIcon icon={faCartShopping} />
-					</Link>
+					<div>
+						<span className={`group ${activeState}`}>{cart}</span>
+						<Link to="/cart">
+							<FontAwesomeIcon icon={faCartShopping} className="cartShopping" />
+						</Link>
+					</div>
 				</div>
 			</nav>
 		</header>

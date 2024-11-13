@@ -1,10 +1,12 @@
 import React from "react";
 import "../index.css";
 
-const Button = ({ content, hero }) => {
+const Button = ({ clicker, content, hero }) => {
 	return (
 		<>
-			<button className={`btn ${hero}`}>{content}</button>
+			<button onClick={clicker} className={`btn ${hero}`}>
+				{content}
+			</button>
 		</>
 	);
 };

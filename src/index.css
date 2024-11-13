@@ -73,53 +73,6 @@ button {
 	cursor: pointer;
 	transition: all 0.3s ease;
 }
-/* h1,
-h2,
-h3,
-h4 {
-	letter-spacing: var(--spacing);
-	text-transform: capitalize;
-	line-height: 1.25;
-	margin-bottom: 0.75rem;
-	font-family: var(--ff-primary);
-}
-h1 {
-	font-size: 3rem;
-}
-h2 {
-	font-size: 2rem;
-}
-h3 {
-	font-size: 1.25rem;
-}
-h4 {
-	font-size: 0.875rem;
-}
-p {
-	margin-bottom: 1.25rem;
-	color: var(--clr-grey-5);
-}
-@media screen and (min-width: 800px) {
-	h1 {
-		font-size: 4rem;
-	}
-	h2 {
-		font-size: 2.5rem;
-	}
-	h3 {
-		font-size: 1.75rem;
-	}
-	h4 {
-		font-size: 1rem;
-	}
-	h1,
-	h2,
-	h3,
-	h4 {
-		line-height: 1;
-	}
-} */
-/*  global classes */
 
 body {
 	/* max-width: 1280px; */
@@ -216,7 +169,7 @@ footer {
 	font-weight: 700;
 	line-height: 40px;
 }
-.card-shopping ul {
+ul.cart-grid {
 	display: grid;
 	grid-template-columns: auto auto auto;
 	gap: 2em 1em;
@@ -247,6 +200,15 @@ footer {
 			rgb(242, 242, 242) 100%
 		),
 		rgb(242, 242, 242) 50% / cover no-repeat;
+}
+.card-section-name {
+	font-size: 18px;
+	font-weight: 700;
+}
+.grid-card-container h6 {
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 28px;
 }
 .grid-card-container {
 	position: relative;

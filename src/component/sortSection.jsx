@@ -61,7 +61,7 @@ const SortSection = () => {
 			</section>
 			<section className="card-shopping">
 				<h1>Exclusive deal just for you</h1>
-				<ul>
+				<ul className="cart-grid">
 					{arrItems.map((item) => (
 						<CardSection
 							img={item.img}
@@ -76,7 +76,7 @@ const SortSection = () => {
 			<section className="number-sort-section">
 				<div>
 					<div style={{ color: "#ff6f61" }} className="caret-left">
-						<FontAwesomeIcon icon={faArrowLeft} size={32} />
+						<FontAwesomeIcon icon={faArrowLeft} size="2xl" />
 					</div>
 					<div className="caret-number">
 						<ul>
@@ -89,7 +89,7 @@ const SortSection = () => {
 						</ul>
 					</div>
 					<div style={{ color: "#ff6f61" }} className="caret-right">
-						<FontAwesomeIcon icon={faArrowRight} size={32} />
+						<FontAwesomeIcon icon={faArrowRight} size="2xl" />
 					</div>
 				</div>
 			</section>
